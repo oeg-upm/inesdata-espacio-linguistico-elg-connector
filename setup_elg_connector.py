@@ -14,14 +14,14 @@ logger = logging.getLogger(__name__)
 RESOURCE_TYPES = ["Corpus", "Lexical/Conceptual resource"]
 TYPE_MAPPING={"Corpus":"corpus","LexicalConceptualResource":"lexical_resource"}
 OPEN_LICENSES = ["Apache-2.0","CC-BY-4.0", "CC-BY-NC-4.0", "CC-BY-NC-ND-4.0", "CC-BY-NC-SA-2.0", "CC-BY-NC-SA-2.5","CC-BY-NC-SA-4.0","CC-BY-SA-4.0", "CC0-1.0"]
-AUTHENTICATION_ENDPOINT = os.environ.getenv("AUTHENTICATION_ENDPOINT", "http://keycloak:8080/realms/dataspace/protocol/openid-connect/token")
-ELG_CONNECTOR_ENDPOINT = os.environ.getenv("ELG_CONNECTOR_ENDPOINT", "http://connector-elg:39193")
+AUTHENTICATION_ENDPOINT = os.getenv("AUTHENTICATION_ENDPOINT", "http://keycloak:8080/realms/dataspace/protocol/openid-connect/token")
+ELG_CONNECTOR_ENDPOINT = os.getenv("ELG_CONNECTOR_ENDPOINT", "http://connector-elg:39193")
 CONNECTOR_ASSETS_ENDPOINT = ELG_CONNECTOR_ENDPOINT + "/management/v3/assets"
 CONNECTOR_PAGINATION_ENDPOINT = ELG_CONNECTOR_ENDPOINT + "/management/pagination"
 CONNECTOR_CONTRACTDEFINITION_ENDPOINT = ELG_CONNECTOR_ENDPOINT + "/management/v3/contractdefinitions"
-USER = os.environ.getenv("USER")
-PASSWORD = os.environ.getenv("PASSWORD")
-ELG_WS_ENDPOINT = os.environ.getenv("ELG_WS_ENDPOINT", "http://elg-connector-ws:5000/") 
+USER = os.getenv("USER")
+PASSWORD = os.getenv("PASSWORD")
+ELG_WS_ENDPOINT = os.getenv("ELG_WS_ENDPOINT", "http://elg-connector-ws:5000/") 
 
 catalog = Catalog()
 
