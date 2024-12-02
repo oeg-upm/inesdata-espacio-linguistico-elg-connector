@@ -1,0 +1,4 @@
+.venv
+.env
+elg_venv
+Dockerfile
