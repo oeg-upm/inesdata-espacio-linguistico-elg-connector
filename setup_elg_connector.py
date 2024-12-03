@@ -72,6 +72,7 @@ def create_asset(id, name="", asset_type="corpus", description="", languages=[],
     "name": name,
     "contenttype": "application/zip",
     "assetType": TYPE_MAPPING[resource_type],
+    "shortDescription": description[:140],
     "dcterms:description": description,
     "assetData":{
       "languages": languages
