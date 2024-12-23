@@ -1,3 +1,6 @@
 # ELG Connector Setup
-## Build a docker image to execute inside a container
+
+We can builld the Docker image with:
+```bash
 docker build -t setup-elg-connector .
+```
